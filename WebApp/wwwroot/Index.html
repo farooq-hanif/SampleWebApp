@@ -3,8 +3,33 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+
+    <script src="lib/jquery/dist/jquery.js"></script>
+
 </head>
 <body>
+
+
     Welcome from fronend web app!
+
+    <div id="container" style="margin-top:15px;">
+
+    </div>
+
+    <script>
+
+        $(function () {
+
+            //var apiUrl = "http://localhost:49647/api/values";
+            var apiUrl = "http://52.247.214.171:81/api/values";
+
+            $.getJSON(apiUrl, function (data) {
+                $("#container").html(data);
+            });
+
+        });
+
+    </script>
+
 </body>
 </html>
